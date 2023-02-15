@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+	<title>PacMan</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="pacman.css">
+</head>
+
+<body onload="gombokvissza()">
+	<div id="terulet">
+		<div id="menu">
+			<h1>PACMAN</h1><br>
+			<label for="nev">Játékos neve:</label><br>
+			<input id="nev" type="text" maxlength="50" onfocus="gombokel()" onfocusout="gombokvissza()"><br>
+			<button onclick="start()">Játék indítása</button><br>
+			<button onclick="ranglista()">Ranglista</button><br>
+			<button onclick="help()">Segítség</button>
+		</div>
+		<div id="jatek" hidden>
+			<button onclick="menu()">Menü</button>
+			<button onclick="ujjatek()">Új Játék</button><br>
+			<canvas id="pacman" width="660" height="660"></canvas>
+		</div>
+		<div id="jatekveg" hidden>
+			<p>A Játék véget ért!</p>
+			<p>A pontodat elküldtük az adatbázisba</p>
+			<button onclick="jatektovabb()"> Új Játék</button>
+			<button onclick="menu()">Menü</button>
+		</div>
+		<div id="ranglista" hidden>
+			<h1>Ranglista</h1>
+			<button onclick="menu()">Menü</button>
+			<table id="rlista" align="center"></table>
+		</div>
+	</div>
+	<script src="pacman.js"></script>
+</body>
+
+</html>
